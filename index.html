@@ -1,903 +1,1060 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Ziddan Ilmy Nazzarin — Junior Web Developer">
+  <title>Ziddan Ilmy Nazzarin — Junior Web Developer</title>
 
-    <title>Ziddan Ilmy Nazzarin | Junior Web Developer</title>
+  <meta name="description" content="Portfolio of Ziddan Ilmy Nazzarin, a Junior Web Developer focused on PHP, MySQL, HTML, CSS, Bootstrap, and Tailwind CSS.">
+  <meta name="author" content="Ziddan Ilmy Nazzarin">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Small layout helpers */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .project.featured,
+    .profile-card {
+      transform-style: preserve-3d;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .project.featured:hover,
+    .profile-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .fade {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <nav class="nav wrap">
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container nav-container">
 
-            <a class="logo" href="#home">
-                ZN<span>.</span>
+      <a href="#home" class="logo">
+        Ziddan<span>.</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        href="https://github.com/Monties28"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-btn"
+      >
+        GitHub
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HOME ================= -->
+  <main>
+
+    <section id="home" class="hero">
+      <div class="container hero-container">
+
+        <div class="hero-content fade">
+
+          <p class="eyebrow">
+            JUNIOR WEB DEVELOPER
+          </p>
+
+          <h1>
+            Building clean and
+            <span>functional</span>
+            web experiences.
+          </h1>
+
+          <p class="hero-description">
+            I’m Ziddan Ilmy Nazzarin, a Junior Web Developer focused on
+            building web applications using PHP, MySQL, HTML, CSS,
+            Bootstrap, and Tailwind CSS.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">
+              View My Projects
             </a>
 
-            <div class="links">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#certificates">Certificates</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-            <a
-                class="github"
-                href="https://github.com/Monties28"
-                target="_blank"
-                rel="noreferrer"
-            >
-                GitHub ↗
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me
             </a>
 
-        </nav>
-    </header>
-
-
-    <main>
-
-        <!-- HOME -->
-        <section id="home" class="hero">
-
-            <div class="wrap hero-grid">
-
-                <div>
-
-                    <p class="eyebrow">
-                        JUNIOR WEB DEVELOPER
-                    </p>
-
-                    <h1>
-                        I build websites and
-                        <em>web applications.</em>
-                    </h1>
-
-                    <p class="lead">
-                        I'm Ziddan Ilmy Nazzarin, a D3 Informatics Engineering graduate
-                        from Politeknik Negeri Samarinda who enjoys building web-based solutions.
-                    </p>
-
-                    <div class="actions">
-
-                        <a class="btn dark" href="#projects">
-                            View my work ↗
-                        </a>
-
-                        <a class="btn" href="#contact">
-                            Let's connect
-                        </a>
-
-                    </div>
-
-                    <p class="availability">
-                        <b></b>
-                        Available for opportunities
-                        <span>Indonesia</span>
-                    </p>
-
-                </div>
-
-
-                <!-- PROFILE -->
-                <div class="profile-card tilt-card">
-
-                    <div class="top">
-                        01 / PROFILE
-                        <span>2026</span>
-                    </div>
-
-                    <div class="profile-photo">
-                        <img
-                            src="assets/Profil.jpeg"
-                            alt="Ziddan Ilmy Nazzarin"
-                        >
-                    </div>
-
-                    <div class="bottom">
-
-                        <div>
-                            <strong>Ziddan Ilmy Nazzarin</strong>
-                            <small>Web Developer</small>
-                        </div>
-
-                        <a
-                            href="https://github.com/Monties28"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            github ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-        <section id="about" class="section">
-
-            <div class="wrap two">
-
-                <div>
-
-                    <p class="label">
-                        ABOUT
-                    </p>
-
-                    <h2>
-                        I build websites and web applications.
-                    </h2>
-
-                </div>
-
-
-                <div class="copy">
-
-                    <p>
-                        I'm a D3 Informatics Engineering graduate from Politeknik Negeri Samarinda
-                        with an interest in web development. I enjoy building web applications,
-                        working with databases, and learning new technologies through real projects.
-                    </p>
-
-                    <p>
-                        My experience comes from academic projects, internship, and hands-on work.
-                        I'm comfortable working with both frontend and backend, especially when
-                        building applications that connect with databases.
-                    </p>
-
-
-                    <div class="facts">
-
-                        <div>
-                            <b>D3</b>
-                            <span>Informatics Engineering</span>
-                        </div>
-
-                        <div>
-                            <b>Web</b>
-                            <span>Development</span>
-                        </div>
-
-                        <div>
-                            <b>PHP</b>
-                            <span>Backend Experience</span>
-                        </div>
-
-                        <div>
-                            <b>MySQL</b>
-                            <span>Database Experience</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- EDUCATION -->
-        <section id="education" class="section soft">
-
-            <div class="wrap">
-
-                <p class="label">
-                    EDUCATION
-                </p>
-
-                <div class="heading">
-
-                    <h2>
-                        My education.
-                    </h2>
-
-                    <p>
-                        My academic background in information technology and computer science.
-                    </p>
-
-                </div>
-
-
-                <div class="experience">
-
-                    <!-- COLLEGE -->
-                    <div class="exp">
-
-                        <div class="date">
-                            Higher Education
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Politeknik Negeri Samarinda
-                            </h3>
-
-                            <p class="muted">
-                                D3 Informatics Engineering
-                            </p>
-
-                            <p>
-                                Studied informatics engineering with a focus on web development,
-                                databases, programming, and information technology.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SMK -->
-                    <div class="exp">
-
-                        <div class="date">
-                            Vocational School
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                SMK Negeri 1 Samarinda
-                            </h3>
-
-                            <p class="muted">
-                                Samarinda Ulu, Samarinda, East Kalimantan
-                            </p>
-
-                            <p>
-                                Vocational education in information technology.
-                                During this period, I also participated in cybersecurity
-                                activities and achieved 3rd place at the student level.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SMP -->
-                    <div class="exp">
-
-                        <div class="date">
-                            Junior High School
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                SMP Negeri 7 Samarinda
-                            </h3>
-
-                            <p class="muted">
-                                Jl. H.M. Kadrie Oening, Samarinda Ulu, Samarinda
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SD -->
-                    <div class="exp">
-
-                        <div class="date">
-                            Elementary School
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                SD Negeri 027 Samarinda Ulu
-                            </h3>
-
-                            <p class="muted">
-                                Samarinda Ulu, Samarinda
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SKILLS -->
-        <section id="skills" class="section">
-
-            <div class="wrap">
-
-                <p class="label">
-                    SKILLS
-                </p>
-
-
-                <div class="heading">
-
-                    <h2>
-                        Tools I work with.
-                    </h2>
-
-                    <p>
-                        A practical stack for building and maintaining web applications.
-                    </p>
-
-                </div>
-
-
-                <div class="skills">
-
-                    <article>
-                        <i>01</i>
-
-                        <h3>
-                            HTML & CSS
-                        </h3>
-
-                        <p>
-                            Responsive layouts and clean interfaces.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>02</i>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
-                        <p>
-                            Interactive client-side functionality.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>03</i>
-
-                        <h3>
-                            PHP
-                        </h3>
-
-                        <p>
-                            Server-side applications and backend logic.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>04</i>
-
-                        <h3>
-                            MySQL
-                        </h3>
-
-                        <p>
-                            Relational database design and management.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>05</i>
-
-                        <h3>
-                            Bootstrap
-                        </h3>
-
-                        <p>
-                            Responsive user interface development.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>06</i>
-
-                        <h3>
-                            Tailwind CSS
-                        </h3>
-
-                        <p>
-                            Utility-first styling for web interfaces.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>07</i>
-
-                        <h3>
-                            Git & GitHub
-                        </h3>
-
-                        <p>
-                            Version control and project workflow.
-                        </p>
-                    </article>
-
-
-                    <article>
-                        <i>08</i>
-
-                        <h3>
-                            OCR & Information Retrieval
-                        </h3>
-
-                        <p>
-                            Document search and processing workflows.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section id="projects" class="section soft">
-
-            <div class="wrap">
-
-                <p class="label">
-                    SELECTED PROJECTS
-                </p>
-
-
-                <div class="heading">
-
-                    <h2>
-                        Work that solves real problems.
-                    </h2>
-
-                    <p>
-                        A selection of projects reflecting my interests in web development
-                        and data management.
-                    </p>
-
-                </div>
-
-
-                <div class="projects">
-
-                    <!-- PROJECT 01 -->
-                    <article class="project featured">
-
-                        <div class="num">
-                            01
-                        </div>
-
-                        <div>
-
-                            <div class="tags">
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>Tailwind CSS</span>
-                            </div>
-
-                            <h3>
-                                SIMADA
-                            </h3>
-
-                            <p>
-                                Web-based document management system with role-based access,
-                                OCR, information retrieval, and data security features.
-                            </p>
-
-                            <a
-                                href="https://github.com/Monties28/SIMADA"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View repository ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 02 -->
-                    <article class="project featured">
-
-                        <div class="num">
-                            02
-                        </div>
-
-                        <div>
-
-                            <div class="tags">
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>Web App</span>
-                            </div>
-
-                            <h3>
-                                Digital Document Management
-                            </h3>
-
-                            <p>
-                                Final-project work focused on managing digital documents
-                                through a centralized web application.
-                            </p>
-
-                            <a
-                                href="https://github.com/Monties28/TA-Sistem-Manajemen-Dokumen-Digital"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View repository ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 03 -->
-                    <article class="project featured">
-
-                        <div class="num">
-                            03
-                        </div>
-
-                        <div>
-
-                            <div class="tags">
-                                <span>Web</span>
-                                <span>Database</span>
-                                <span>Management</span>
-                            </div>
-
-                            <h3>
-                                Sehati Computer
-                            </h3>
-
-                            <p>
-                                A practical management concept for computer retail operations,
-                                focusing on inventory, stock, sales, and data organization.
-                            </p>
-
-                            <a
-                                href="https://github.com/Monties28"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                More on GitHub ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- EXPERIENCE -->
-        <section id="experience" class="section">
-
-            <div class="wrap">
-
-                <p class="label">
-                    EXPERIENCE
-                </p>
-
-
-                <div class="experience">
-
-                    <!-- EXPERIENCE 01 -->
-                    <div class="exp">
-
-                        <div class="date">
-                            2023 — Present
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Computer Retail & Technical Support
-                            </h3>
-
-                            <p class="muted">
-                                Sehati Computer · Samarinda
-                            </p>
-
-                            <p>
-                                Hands-on experience in a computer retail environment,
-                                supporting daily operations and working with hardware,
-                                software, and customer needs.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- EXPERIENCE 02 -->
-                    <div class="exp">
-
-                        <div class="date">
-                            2022
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Internship
-                            </h3>
-
-                            <p class="muted">
-                                PT Lintasmaya Multi Media
-                            </p>
-
-                            <p>
-                                Completed practical work experience in a professional
-                                information technology environment.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- EXPERIENCE 03 -->
-                    <div class="exp">
-
-                        <div class="date">
-                            Academic Projects
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Web Application Development
-                            </h3>
-
-                            <p class="muted">
-                                Politeknik Negeri Samarinda
-                            </p>
-
-                            <p>
-                                Developed applications involving web interfaces, databases,
-                                document management, OCR, information retrieval, and security.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CERTIFICATES -->
-        <section id="certificates" class="section soft">
-
-            <div class="wrap">
-
-                <p class="label">
-                    CERTIFICATES & ACHIEVEMENTS
-                </p>
-
-
-                <div class="heading">
-
-                    <h2>
-                        Certificates & achievements.
-                    </h2>
-
-                    <p>
-                        Selected certifications, training, competitions, and achievements.
-                    </p>
-
-                </div>
-
-
-                <div class="certs">
-
-                    <!-- 2026 -->
-                    <article>
-
-                        <small>
-                            2026
-                        </small>
-
-                        <h3>
-                            TOEFL Prediction Test
-                        </h3>
-
-                        <p>
-                            UPA Bahasa · Score 430
-                        </p>
-
-                    </article>
-
-
-                    <!-- 2024 -->
-                    <article>
-
-                        <small>
-                            2024
-                        </small>
-
-                        <h3>
-                            Junior Web Developer
-                        </h3>
-
-                        <p>
-                            BNSP · Software Programming & Development
-                        </p>
-
-                    </article>
-
-
-                    <!-- 2023 -->
-                    <article>
-
-                        <small>
-                            2023
-                        </small>
-
-                        <h3>
-                            Computer Networking
-                        </h3>
-
-                        <p>
-                            LPK Borneo · Good
-                        </p>
-
-                    </article>
-
-
-                    <!-- 2022 -->
-                    <article>
-
-                        <small>
-                            2022
-                        </small>
-
-                        <h3>
-                            Cybersecurity
-                        </h3>
-
-                        <p>
-                            3rd Place · Student Level
-                        </p>
-
-                    </article>
-
-
-                    <!-- 2021 -->
-                    <article>
-
-                        <small>
-                            2021
-                        </small>
-
-                        <h3>
-                            SMAKENSA KRC
-                        </h3>
-
-                        <p>
-                            Kontes Robot Cerdas · Student Level
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-        <section id="contact" class="contact">
-
-            <div class="wrap">
-
-                <p class="label">
-                    CONTACT
-                </p>
-
-                <h2>
-                    Have a project or opportunity in mind?
-                </h2>
-
-                <p>
-                    I’m open to junior web development opportunities, collaboration,
-                    and projects where I can keep learning and contribute.
-                </p>
-
-
-                <div class="contact-links">
-
-                    <a href="mailto:zidandf99@gmail.com">
-                        zidandf99@gmail.com ↗
-                    </a>
-
-                    <a
-                        href="https://github.com/Monties28"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        GitHub ↗
-                    </a>
-
-                    <a
-                        href="https://wa.me/62895700381419"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        WhatsApp ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="wrap">
-
-            <span>
-                © 2026 Ziddan Ilmy Nazzarin
-            </span>
-
-            <span>
-                Built with HTML, CSS & JavaScript.
-            </span>
+          </div>
 
         </div>
 
-    </footer>
+
+        <div class="hero-profile fade">
+
+          <div class="profile-card tilt-card">
+
+            <div class="profile-image-wrapper">
+              <img
+                src="assets/Profil.jpeg"
+                alt="Ziddan Ilmy Nazzarin"
+                class="profile-image"
+              >
+            </div>
+
+            <div class="profile-info">
+
+              <h2>
+                Ziddan Ilmy Nazzarin
+              </h2>
+
+              <p>
+                Junior Web Developer
+              </p>
+
+              <div class="profile-location">
+                Samarinda, East Kalimantan
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
 
-    <script src="js/script.js"></script>
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">ABOUT ME</p>
+          <h2>Turning ideas into practical web solutions.</h2>
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-text fade">
+
+            <p>
+              I am a D3 Informatics Engineering student at Politeknik Negeri
+              Samarinda with an interest in web development and information
+              systems.
+            </p>
+
+            <p>
+              I enjoy developing web-based applications, managing databases,
+              and turning requirements into simple and functional digital
+              solutions.
+            </p>
+
+            <p>
+              Through academic projects, internship experience, and personal
+              development, I continue to improve my skills in programming,
+              database management, and web development.
+            </p>
+
+          </div>
+
+
+          <div class="about-highlight fade">
+
+            <div class="highlight-card">
+              <strong>Web Development</strong>
+              <span>PHP · HTML · CSS</span>
+            </div>
+
+            <div class="highlight-card">
+              <strong>Database</strong>
+              <span>MySQL · Data Management</span>
+            </div>
+
+            <div class="highlight-card">
+              <strong>Frontend</strong>
+              <span>Bootstrap · Tailwind CSS</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">EDUCATION</p>
+          <h2>My educational background.</h2>
+        </div>
+
+
+        <div class="timeline">
+
+          <div class="timeline-item fade">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <span class="timeline-year">
+                2023 — 2026
+              </span>
+
+              <h3>
+                Politeknik Negeri Samarinda
+              </h3>
+
+              <p class="timeline-subtitle">
+                D3 Informatics Engineering
+              </p>
+
+              <p>
+                Department of Information Technology with a focus on
+                Web Development, Programming, Database, Information Systems,
+                and Software Engineering.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item fade">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <h3>
+                SMK Negeri 1 Samarinda
+              </h3>
+
+              <p>
+                Vocational education with experience in information
+                technology and cybersecurity activities.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item fade">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <h3>
+                SMP Negeri 7 Samarinda
+              </h3>
+
+              <p>
+                Samarinda, East Kalimantan.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item fade">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <h3>
+                SD Negeri 027 Samarinda Ulu
+              </h3>
+
+              <p>
+                Samarinda, East Kalimantan.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">SKILLS</p>
+          <h2>Technologies I work with.</h2>
+        </div>
+
+
+        <div class="skills-grid">
+
+          <div class="skill-card fade">
+            <div class="skill-number">01</div>
+            <h3>PHP</h3>
+            <p>
+              Building server-side web applications using PHP Native.
+            </p>
+          </div>
+
+
+          <div class="skill-card fade">
+            <div class="skill-number">02</div>
+            <h3>MySQL</h3>
+            <p>
+              Designing and managing relational databases for web applications.
+            </p>
+          </div>
+
+
+          <div class="skill-card fade">
+            <div class="skill-number">03</div>
+            <h3>HTML & CSS</h3>
+            <p>
+              Creating structured and responsive web interfaces.
+            </p>
+          </div>
+
+
+          <div class="skill-card fade">
+            <div class="skill-number">04</div>
+            <h3>Bootstrap</h3>
+            <p>
+              Developing responsive interfaces using Bootstrap components.
+            </p>
+          </div>
+
+
+          <div class="skill-card fade">
+            <div class="skill-number">05</div>
+            <h3>Tailwind CSS</h3>
+            <p>
+              Building modern and responsive interfaces with utility classes.
+            </p>
+          </div>
+
+
+          <div class="skill-card fade">
+            <div class="skill-number">06</div>
+            <h3>Database Management</h3>
+            <p>
+              Working with data structures, CRUD operations, and relational databases.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">PROJECTS</p>
+          <h2>Selected projects.</h2>
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 01 -->
+          <article class="project featured tilt-card fade">
+
+            <div class="project-number">
+              01
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-top">
+
+                <span class="project-label">
+                  FINAL PROJECT
+                </span>
+
+                <a
+                  href="https://github.com/Monties28/SIMADA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  View Repository ↗
+                </a>
+
+              </div>
+
+              <h3>
+                SIMADA
+              </h3>
+
+              <p>
+                A web-based Data Management System designed to help manage,
+                organize, search, and maintain documents efficiently.
+              </p>
+
+              <div class="project-tags">
+
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Tailwind CSS</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 02 -->
+          <article class="project featured tilt-card fade">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-top">
+
+                <span class="project-label">
+                  WEB APPLICATION
+                </span>
+
+                <a
+                  href="https://github.com/Monties28/TA-Sistem-Manajemen-Dokumen-Digital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  View Repository ↗
+                </a>
+
+              </div>
+
+              <h3>
+                Digital Document Management
+              </h3>
+
+              <p>
+                A web-based document management application with login,
+                dashboard, document upload, search, download, verification,
+                and document status management.
+              </p>
+
+              <div class="project-tags">
+
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Web App</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+          <article class="project featured tilt-card fade">
+
+            <div class="project-number">
+              03
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-top">
+
+                <span class="project-label">
+                  INTERNSHIP PROJECT
+                </span>
+
+                <a
+                  href="https://github.com/Monties28"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  GitHub Profile ↗
+                </a>
+
+              </div>
+
+              <h3>
+                Sehati Computer E-Commerce
+              </h3>
+
+              <p>
+                A web-based e-commerce platform developed for CV Sehati
+                Computer during my internship, focusing on product management,
+                categories, and online product presentation.
+              </p>
+
+              <div class="project-tags">
+
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>Tailwind CSS</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">EXPERIENCE</p>
+          <h2>My professional experience.</h2>
+        </div>
+
+
+        <div class="experience-list">
+
+
+          <!-- EXPERIENCE 01 -->
+          <article class="experience-item fade">
+
+            <div class="experience-date">
+              2024 — Present
+            </div>
+
+            <div class="experience-content">
+
+              <h3>
+                Sales / Marketing
+              </h3>
+
+              <p class="experience-company">
+                CV Sehati Computer · Samarinda
+              </p>
+
+              <p>
+                Handling sales and marketing activities, assisting customers
+                with computer, laptop, printer, and technology products,
+                and supporting daily store operations.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- EXPERIENCE 02 -->
+          <article class="experience-item fade">
+
+            <div class="experience-date">
+              2022
+            </div>
+
+            <div class="experience-content">
+
+              <h3>
+                IT Support & Web Developer Intern
+              </h3>
+
+              <p class="experience-company">
+                CV Sehati Computer · Samarinda
+              </p>
+
+              <p>
+                Worked on IT support tasks while developing a web-based
+                e-commerce platform for CV Sehati Computer as the main
+                outcome of the internship.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- EXPERIENCE 03 -->
+          <article class="experience-item fade">
+
+            <div class="experience-date">
+              Academic Projects
+            </div>
+
+            <div class="experience-content">
+
+              <h3>
+                Web Application Development
+              </h3>
+
+              <p class="experience-company">
+                Politeknik Negeri Samarinda
+              </p>
+
+              <p>
+                Developed several academic web applications involving
+                frontend interfaces, backend development, database management,
+                and system implementation.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= CERTIFICATES ================= -->
+    <section id="certificates" class="section section-alt">
+      <div class="container">
+
+        <div class="section-heading fade">
+          <p class="section-label">CERTIFICATES</p>
+          <h2>Certifications & achievements.</h2>
+        </div>
+
+
+        <div class="certificates-grid">
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2026
+            </span>
+
+            <h3>
+              TOEFL Prediction Test
+            </h3>
+
+            <p>
+              UPA Bahasa · Politeknik Negeri Samarinda
+            </p>
+
+            <strong>
+              Score 430
+            </strong>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2024
+            </span>
+
+            <h3>
+              Junior Web Developer
+            </h3>
+
+            <p>
+              BNSP · Software Programming & Development
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2023
+            </span>
+
+            <h3>
+              Computer Networking
+            </h3>
+
+            <p>
+              LPK Borneo · Good
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2022
+            </span>
+
+            <h3>
+              Cybersecurity
+            </h3>
+
+            <p>
+              3rd Place · Student Level
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2021
+            </span>
+
+            <h3>
+              SMAKENSA KRC
+            </h3>
+
+            <p>
+              Kontes Robot Cerdas · Student Level
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2024
+            </span>
+
+            <h3>
+              Bina Akrab Teknologi Informasi
+            </h3>
+
+            <p>
+              Himpunan Mahasiswa Teknologi Informasi · Participant
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2023
+            </span>
+
+            <h3>
+              OMARU Politeknik Negeri Samarinda
+            </h3>
+
+            <p>
+              Politeknik Negeri Samarinda · Participant
+            </p>
+
+          </div>
+
+
+          <div class="certificate-card fade">
+
+            <span class="certificate-year">
+              2021
+            </span>
+
+            <h3>
+              Kontes Robot Cerdas
+            </h3>
+
+            <p>
+              Politeknik Negeri Samarinda · Participant
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+
+        <div class="contact-box fade">
+
+          <div class="contact-content">
+
+            <p class="section-label">
+              CONTACT
+            </p>
+
+            <h2>
+              Let’s build something together.
+            </h2>
+
+            <p>
+              If you are looking for a Junior Web Developer or want to
+              discuss a web development project, feel free to get in touch.
+            </p>
+
+          </div>
+
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:zidandf99@gmail.com"
+              class="contact-link"
+            >
+              <span>Email</span>
+              <strong>
+                zidandf99@gmail.com
+              </strong>
+            </a>
+
+
+            <a
+              href="https://github.com/Monties28"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span>GitHub</span>
+              <strong>
+                github.com/Monties28
+              </strong>
+            </a>
+
+
+            <a
+              href="https://wa.me/62895700381419"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span>WhatsApp</span>
+              <strong>
+                +62 895-7003-81419
+              </strong>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="container footer-container">
+
+      <p>
+        © 2026 Ziddan Ilmy Nazzarin.
+      </p>
+
+      <p>
+        Junior Web Developer
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* Scroll reveal */
+      const fadeElements = document.querySelectorAll(".fade");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+      fadeElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+
+      /* 3D card tilt */
+      const tiltCards = document.querySelectorAll(".tilt-card");
+
+      const isTouchDevice =
+        window.matchMedia("(hover: none)").matches ||
+        "ontouchstart" in window;
+
+      if (!isTouchDevice) {
+
+        tiltCards.forEach((card) => {
+
+          card.addEventListener("pointermove", (event) => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x =
+              event.clientX - rect.left;
+
+            const y =
+              event.clientY - rect.top;
+
+            const centerX =
+              rect.width / 2;
+
+            const centerY =
+              rect.height / 2;
+
+            const rotateX =
+              ((y - centerY) / centerY) * -3;
+
+            const rotateY =
+              ((x - centerX) / centerX) * 3;
+
+            card.style.transform =
+              `perspective(1000px)
+               rotateX(${rotateX}deg)
+               rotateY(${rotateY}deg)
+               translateY(-5px)`;
+
+          });
+
+
+          card.addEventListener("pointerleave", () => {
+
+            card.style.transform =
+              "";
+
+          });
+
+        });
+
+      }
+
+
+      /* Active navigation */
+      const sections =
+        document.querySelectorAll("section[id]");
+
+      const navLinks =
+        document.querySelectorAll(".nav a");
+
+      window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach((section) => {
+
+          const sectionTop =
+            section.offsetTop - 150;
+
+          if (
+            window.scrollY >= sectionTop
+          ) {
+            current = section.getAttribute("id");
+          }
+
+        });
+
+        navLinks.forEach((link) => {
+
+          link.classList.remove("active");
+
+          if (
+            link.getAttribute("href") === `#${current}`
+          ) {
+            link.classList.add("active");
+          }
+
+        });
+
+      });
+
+    });
+  </script>
 
 </body>
-
 </html>
