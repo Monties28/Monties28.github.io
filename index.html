@@ -14,58 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* Small layout helpers */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .project.featured,
-    .profile-card {
-      transform-style: preserve-3d;
-      transition: transform .35s ease, box-shadow .35s ease;
-    }
-
-    .project.featured:hover,
-    .profile-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .fade {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-
-      .fade {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -88,12 +36,10 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a
-        href="https://github.com/Monties28"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="github-btn"
-      >
+      <a href="https://github.com/Monties28"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="github-btn">
         GitHub
       </a>
 
@@ -101,40 +47,49 @@
   </header>
 
 
-  <!-- ================= HOME ================= -->
+  <!-- ================= HERO ================= -->
   <main>
 
-    <section id="home" class="hero">
+    <section class="hero" id="home">
       <div class="container hero-container">
 
         <div class="hero-content fade">
 
-          <p class="eyebrow">
-            JUNIOR WEB DEVELOPER
-          </p>
+          <p class="hero-label">JUNIOR WEB DEVELOPER</p>
 
           <h1>
             Building clean and
-            <span>functional</span>
-            web experiences.
+            <span>functional web experiences.</span>
           </h1>
 
           <p class="hero-description">
-            I’m Ziddan Ilmy Nazzarin, a Junior Web Developer focused on
-            building web applications using PHP, MySQL, HTML, CSS,
-            Bootstrap, and Tailwind CSS.
+            I’m Ziddan Ilmy Nazzarin, a D3 Informatics Engineering student
+            focused on web development, database systems, and practical
+            digital solutions.
           </p>
 
           <div class="hero-buttons">
-
             <a href="#projects" class="btn btn-primary">
-              View My Projects
+              View Projects
             </a>
 
             <a href="#contact" class="btn btn-secondary">
               Contact Me
             </a>
+          </div>
 
+          <div class="hero-social">
+            <a href="https://github.com/Monties28"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+
+            <span>/</span>
+
+            <a href="mailto:zidandf99@gmail.com">
+              Email
+            </a>
           </div>
 
         </div>
@@ -154,16 +109,15 @@
 
             <div class="profile-info">
 
-              <h2>
-                Ziddan Ilmy Nazzarin
-              </h2>
+              <h2>Ziddan Ilmy Nazzarin</h2>
 
               <p>
                 Junior Web Developer
               </p>
 
               <div class="profile-location">
-                Samarinda, East Kalimantan
+                <span>●</span>
+                Samarinda, Indonesia
               </div>
 
             </div>
@@ -177,12 +131,17 @@
 
 
     <!-- ================= ABOUT ================= -->
-    <section id="about" class="section">
+    <section class="section" id="about">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">ABOUT ME</p>
-          <h2>Turning ideas into practical web solutions.</h2>
+          <span class="section-label">01 — ABOUT</span>
+
+          <h2>
+            Turning ideas into
+            <span>web solutions.</span>
+          </h2>
         </div>
 
 
@@ -197,15 +156,15 @@
             </p>
 
             <p>
-              I enjoy developing web-based applications, managing databases,
-              and turning requirements into simple and functional digital
-              solutions.
+              I enjoy building web applications that are simple, structured,
+              and easy to use. My experience includes working with PHP,
+              MySQL, HTML, CSS, Bootstrap, and Tailwind CSS.
             </p>
 
             <p>
-              Through academic projects, internship experience, and personal
-              development, I continue to improve my skills in programming,
-              database management, and web development.
+              Through academic projects, internship experience, and practical
+              work, I continue to improve my development skills and learn how
+              technology can solve real-world problems.
             </p>
 
           </div>
@@ -214,18 +173,23 @@
           <div class="about-highlight fade">
 
             <div class="highlight-card">
-              <strong>Web Development</strong>
-              <span>PHP · HTML · CSS</span>
+              <strong>D3</strong>
+              <span>Informatics Engineering</span>
             </div>
 
             <div class="highlight-card">
-              <strong>Database</strong>
-              <span>MySQL · Data Management</span>
+              <strong>PHP</strong>
+              <span>Web Development</span>
             </div>
 
             <div class="highlight-card">
-              <strong>Frontend</strong>
-              <span>Bootstrap · Tailwind CSS</span>
+              <strong>MySQL</strong>
+              <span>Database Management</span>
+            </div>
+
+            <div class="highlight-card">
+              <strong>BNSP</strong>
+              <span>Junior Web Developer</span>
             </div>
 
           </div>
@@ -233,16 +197,22 @@
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= EDUCATION ================= -->
-    <section id="education" class="section section-alt">
+    <section class="section-alt" id="education">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">EDUCATION</p>
-          <h2>My educational background.</h2>
+          <span class="section-label">02 — EDUCATION</span>
+
+          <h2>
+            Academic
+            <span>background.</span>
+          </h2>
         </div>
 
 
@@ -267,9 +237,9 @@
               </p>
 
               <p>
-                Department of Information Technology with a focus on
-                Web Development, Programming, Database, Information Systems,
-                and Software Engineering.
+                Jurusan Teknologi Informasi with a focus on web development,
+                programming, databases, information systems, and software
+                engineering.
               </p>
 
             </div>
@@ -287,9 +257,13 @@
                 SMK Negeri 1 Samarinda
               </h3>
 
+              <p class="timeline-subtitle">
+                Vocational High School
+              </p>
+
               <p>
-                Vocational education with experience in information
-                technology and cybersecurity activities.
+                Developed a foundation in information technology and
+                participated in technology-related activities and competitions.
               </p>
 
             </div>
@@ -308,7 +282,7 @@
               </h3>
 
               <p>
-                Samarinda, East Kalimantan.
+                Completed junior secondary education in Samarinda.
               </p>
 
             </div>
@@ -327,7 +301,7 @@
               </h3>
 
               <p>
-                Samarinda, East Kalimantan.
+                Completed primary education in Samarinda.
               </p>
 
             </div>
@@ -337,95 +311,101 @@
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= SKILLS ================= -->
-    <section id="skills" class="section">
+    <section class="section" id="skills">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">SKILLS</p>
-          <h2>Technologies I work with.</h2>
+          <span class="section-label">03 — SKILLS</span>
+
+          <h2>
+            Tools I use to
+            <span>build things.</span>
+          </h2>
         </div>
 
 
         <div class="skills-grid">
 
           <div class="skill-card fade">
-            <div class="skill-number">01</div>
+            <span class="skill-number">01</span>
+            <h3>HTML</h3>
+            <p>Semantic and structured web pages.</p>
+          </div>
+
+          <div class="skill-card fade">
+            <span class="skill-number">02</span>
+            <h3>CSS</h3>
+            <p>Responsive layouts and modern interfaces.</p>
+          </div>
+
+          <div class="skill-card fade">
+            <span class="skill-number">03</span>
+            <h3>JavaScript</h3>
+            <p>Interactive and dynamic web experiences.</p>
+          </div>
+
+          <div class="skill-card fade">
+            <span class="skill-number">04</span>
             <h3>PHP</h3>
-            <p>
-              Building server-side web applications using PHP Native.
-            </p>
+            <p>Backend development and web applications.</p>
           </div>
 
-
           <div class="skill-card fade">
-            <div class="skill-number">02</div>
+            <span class="skill-number">05</span>
             <h3>MySQL</h3>
-            <p>
-              Designing and managing relational databases for web applications.
-            </p>
+            <p>Database design and data management.</p>
           </div>
 
-
           <div class="skill-card fade">
-            <div class="skill-number">03</div>
-            <h3>HTML & CSS</h3>
-            <p>
-              Creating structured and responsive web interfaces.
-            </p>
-          </div>
-
-
-          <div class="skill-card fade">
-            <div class="skill-number">04</div>
+            <span class="skill-number">06</span>
             <h3>Bootstrap</h3>
-            <p>
-              Developing responsive interfaces using Bootstrap components.
-            </p>
+            <p>Responsive interface development.</p>
           </div>
 
-
           <div class="skill-card fade">
-            <div class="skill-number">05</div>
+            <span class="skill-number">07</span>
             <h3>Tailwind CSS</h3>
-            <p>
-              Building modern and responsive interfaces with utility classes.
-            </p>
+            <p>Utility-first responsive interfaces.</p>
           </div>
 
-
           <div class="skill-card fade">
-            <div class="skill-number">06</div>
-            <h3>Database Management</h3>
-            <p>
-              Working with data structures, CRUD operations, and relational databases.
-            </p>
+            <span class="skill-number">08</span>
+            <h3>Git & GitHub</h3>
+            <p>Version control and project management.</p>
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="section section-alt">
+    <section class="section-alt" id="projects">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">PROJECTS</p>
-          <h2>Selected projects.</h2>
+          <span class="section-label">04 — PROJECTS</span>
+
+          <h2>
+            Selected
+            <span>projects.</span>
+          </h2>
         </div>
 
 
-        <div class="projects-grid">
-
+        <div class="projects-list">
 
           <!-- PROJECT 01 -->
-          <article class="project featured tilt-card fade">
+          <article class="project-card fade">
 
             <div class="project-number">
               01
@@ -433,39 +413,35 @@
 
             <div class="project-content">
 
-              <div class="project-top">
-
-                <span class="project-label">
-                  FINAL PROJECT
-                </span>
-
-                <a
-                  href="https://github.com/Monties28/SIMADA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                >
-                  View Repository ↗
-                </a>
-
-              </div>
+              <span class="project-label">
+                FINAL PROJECT
+              </span>
 
               <h3>
-                SIMADA
+                SIMADA — Data Management System
               </h3>
 
               <p>
-                A web-based Data Management System designed to help manage,
-                organize, search, and maintain documents efficiently.
+                A web-based data management system developed for UPTD Sentral
+                Pembenihan Air Payau dan Air Laut Muara Badak. The system
+                focuses on document management, data organization, security,
+                OCR, information retrieval, and user access management.
               </p>
 
               <div class="project-tags">
-
                 <span>PHP</span>
                 <span>MySQL</span>
                 <span>Tailwind CSS</span>
-
+                <span>OCR</span>
+                <span>TF-IDF</span>
               </div>
+
+              <a href="https://github.com/Monties28/SIMADA"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="project-link">
+                View on GitHub →
+              </a>
 
             </div>
 
@@ -473,7 +449,7 @@
 
 
           <!-- PROJECT 02 -->
-          <article class="project featured tilt-card fade">
+          <article class="project-card fade">
 
             <div class="project-number">
               02
@@ -481,40 +457,33 @@
 
             <div class="project-content">
 
-              <div class="project-top">
-
-                <span class="project-label">
-                  WEB APPLICATION
-                </span>
-
-                <a
-                  href="https://github.com/Monties28/TA-Sistem-Manajemen-Dokumen-Digital"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                >
-                  View Repository ↗
-                </a>
-
-              </div>
+              <span class="project-label">
+                ACADEMIC PROJECT
+              </span>
 
               <h3>
-                Digital Document Management
+                Digital Document Management System
               </h3>
 
               <p>
-                A web-based document management application with login,
-                dashboard, document upload, search, download, verification,
-                and document status management.
+                A web-based document management application designed to
+                organize, upload, search, download, and verify digital
+                documents through a structured workflow.
               </p>
 
               <div class="project-tags">
-
                 <span>PHP</span>
                 <span>MySQL</span>
                 <span>Web App</span>
-
+                <span>FSM</span>
               </div>
+
+              <a href="https://github.com/Monties28/TA-Sistem-Manajemen-Dokumen-Digital"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="project-link">
+                View on GitHub →
+              </a>
 
             </div>
 
@@ -522,7 +491,7 @@
 
 
           <!-- PROJECT 03 -->
-          <article class="project featured tilt-card fade">
+          <article class="project-card fade">
 
             <div class="project-number">
               03
@@ -530,22 +499,9 @@
 
             <div class="project-content">
 
-              <div class="project-top">
-
-                <span class="project-label">
-                  INTERNSHIP PROJECT
-                </span>
-
-                <a
-                  href="https://github.com/Monties28"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                >
-                  GitHub Profile ↗
-                </a>
-
-              </div>
+              <span class="project-label">
+                INTERNSHIP PROJECT
+              </span>
 
               <h3>
                 Sehati Computer E-Commerce
@@ -558,140 +514,163 @@
               </p>
 
               <div class="project-tags">
-
                 <span>PHP</span>
                 <span>MySQL</span>
                 <span>Bootstrap</span>
                 <span>Tailwind CSS</span>
-
               </div>
+
+              <a href="https://github.com/Monties28"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="project-link">
+                View on GitHub →
+              </a>
 
             </div>
 
           </article>
 
-
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" class="section">
+    <section class="section" id="experience">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">EXPERIENCE</p>
-          <h2>My professional experience.</h2>
+          <span class="section-label">05 — EXPERIENCE</span>
+
+          <h2>
+            Where I’ve
+            <span>worked.</span>
+          </h2>
         </div>
 
 
-        <div class="experience-list">
-
+        <div class="timeline">
 
           <!-- EXPERIENCE 01 -->
-          <article class="experience-item fade">
+          <div class="timeline-item fade">
 
-            <div class="experience-date">
-              2024 — Present
-            </div>
+            <div class="timeline-dot"></div>
 
-            <div class="experience-content">
+            <div class="timeline-content">
+
+              <span class="timeline-year">
+                2024 — Present
+              </span>
 
               <h3>
                 Sales / Marketing
               </h3>
 
-              <p class="experience-company">
+              <p class="timeline-subtitle">
                 CV Sehati Computer · Samarinda
               </p>
 
               <p>
                 Handling sales and marketing activities, assisting customers
-                with computer, laptop, printer, and technology products,
-                and supporting daily store operations.
+                with computer, laptop, printer, and technology products, and
+                supporting daily store operations.
               </p>
 
             </div>
 
-          </article>
+          </div>
 
 
           <!-- EXPERIENCE 02 -->
-          <article class="experience-item fade">
+          <div class="timeline-item fade">
 
-            <div class="experience-date">
-              2022
-            </div>
+            <div class="timeline-dot"></div>
 
-            <div class="experience-content">
+            <div class="timeline-content">
+
+              <span class="timeline-year">
+                2022
+              </span>
 
               <h3>
                 IT Support & Web Developer Intern
               </h3>
 
-              <p class="experience-company">
+              <p class="timeline-subtitle">
                 CV Sehati Computer · Samarinda
               </p>
 
               <p>
                 Worked on IT support tasks while developing a web-based
-                e-commerce platform for CV Sehati Computer as the main
-                outcome of the internship.
+                e-commerce platform for CV Sehati Computer as the main outcome
+                of the internship.
               </p>
 
             </div>
 
-          </article>
+          </div>
 
 
           <!-- EXPERIENCE 03 -->
-          <article class="experience-item fade">
+          <div class="timeline-item fade">
 
-            <div class="experience-date">
-              Academic Projects
-            </div>
+            <div class="timeline-dot"></div>
 
-            <div class="experience-content">
+            <div class="timeline-content">
+
+              <span class="timeline-year">
+                Academic Projects
+              </span>
 
               <h3>
                 Web Application Development
               </h3>
 
-              <p class="experience-company">
+              <p class="timeline-subtitle">
                 Politeknik Negeri Samarinda
               </p>
 
               <p>
-                Developed several academic web applications involving
-                frontend interfaces, backend development, database management,
-                and system implementation.
+                Developed several web-based applications as part of academic
+                projects, covering database management, web interfaces,
+                information systems, and application development.
               </p>
 
             </div>
 
-          </article>
-
+          </div>
 
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= CERTIFICATES ================= -->
-    <section id="certificates" class="section section-alt">
+    <section class="section-alt" id="certificates">
+
       <div class="container">
 
         <div class="section-heading fade">
-          <p class="section-label">CERTIFICATES</p>
-          <h2>Certifications & achievements.</h2>
+
+          <span class="section-label">
+            06 — CERTIFICATES
+          </span>
+
+          <h2>
+            Certifications &
+            <span>achievements.</span>
+          </h2>
+
         </div>
 
 
         <div class="certificates-grid">
-
 
           <div class="certificate-card fade">
 
@@ -707,9 +686,9 @@
               UPA Bahasa · Politeknik Negeri Samarinda
             </p>
 
-            <strong>
+            <span class="certificate-result">
               Score 430
-            </strong>
+            </span>
 
           </div>
 
@@ -728,6 +707,10 @@
               BNSP · Software Programming & Development
             </p>
 
+            <span class="certificate-result">
+              Professional Certification
+            </span>
+
           </div>
 
 
@@ -742,8 +725,12 @@
             </h3>
 
             <p>
-              LPK Borneo · Good
+              LPK Borneo Samarinda
             </p>
+
+            <span class="certificate-result">
+              Good
+            </span>
 
           </div>
 
@@ -759,8 +746,12 @@
             </h3>
 
             <p>
-              3rd Place · Student Level
+              Student Level
             </p>
+
+            <span class="certificate-result">
+              3rd Place
+            </span>
 
           </div>
 
@@ -779,6 +770,10 @@
               Kontes Robot Cerdas · Student Level
             </p>
 
+            <span class="certificate-result">
+              Participant
+            </span>
+
           </div>
 
 
@@ -793,8 +788,12 @@
             </h3>
 
             <p>
-              Himpunan Mahasiswa Teknologi Informasi · Participant
+              Himpunan Mahasiswa Teknologi Informasi
             </p>
+
+            <span class="certificate-result">
+              Participant
+            </span>
 
           </div>
 
@@ -810,8 +809,12 @@
             </h3>
 
             <p>
-              Politeknik Negeri Samarinda · Participant
+              Politeknik Negeri Samarinda
             </p>
+
+            <span class="certificate-result">
+              Participant
+            </span>
 
           </div>
 
@@ -827,78 +830,94 @@
             </h3>
 
             <p>
-              Politeknik Negeri Samarinda · Participant
+              Politeknik Negeri Samarinda
             </p>
 
-          </div>
+            <span class="certificate-result">
+              Participant
+            </span>
 
+          </div>
 
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section contact-section">
+    <section class="section contact-section" id="contact">
+
       <div class="container">
 
-        <div class="contact-box fade">
+        <div class="section-heading fade">
 
-          <div class="contact-content">
+          <span class="section-label">
+            07 — CONTACT
+          </span>
 
-            <p class="section-label">
-              CONTACT
-            </p>
+          <h2>
+            Let’s build something
+            <span>together.</span>
+          </h2>
 
-            <h2>
-              Let’s build something together.
-            </h2>
+        </div>
 
-            <p>
-              If you are looking for a Junior Web Developer or want to
-              discuss a web development project, feel free to get in touch.
-            </p>
 
-          </div>
+        <div class="contact-content fade">
+
+          <p>
+            Interested in working together or have a project in mind?
+            Feel free to reach out.
+          </p>
 
 
           <div class="contact-links">
 
-            <a
-              href="mailto:zidandf99@gmail.com"
-              class="contact-link"
-            >
-              <span>Email</span>
-              <strong>
+            <a href="mailto:zidandf99@gmail.com"
+               class="contact-link">
+
+              <span class="contact-label">
+                Email
+              </span>
+
+              <span class="contact-value">
                 zidandf99@gmail.com
-              </strong>
+              </span>
+
             </a>
 
 
-            <a
-              href="https://github.com/Monties28"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link"
-            >
-              <span>GitHub</span>
-              <strong>
+            <a href="https://github.com/Monties28"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+
+              <span class="contact-label">
+                GitHub
+              </span>
+
+              <span class="contact-value">
                 github.com/Monties28
-              </strong>
+              </span>
+
             </a>
 
 
-            <a
-              href="https://wa.me/62895700381419"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link"
-            >
-              <span>WhatsApp</span>
-              <strong>
+            <a href="https://wa.me/62895700381419"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+
+              <span class="contact-label">
+                WhatsApp
+              </span>
+
+              <span class="contact-value">
                 +62 895-7003-81419
-              </strong>
+              </span>
+
             </a>
 
           </div>
@@ -906,6 +925,7 @@
         </div>
 
       </div>
+
     </section>
 
   </main>
@@ -920,140 +940,147 @@
         © 2026 Ziddan Ilmy Nazzarin.
       </p>
 
-      <p>
-        Junior Web Developer
-      </p>
+      <a href="#home">
+        Back to top ↑
+      </a>
 
     </div>
 
   </footer>
 
 
-  <!-- ================= SCRIPT ================= -->
   <script src="js/script.js"></script>
 
+
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
 
-      /* Scroll reveal */
-      const fadeElements = document.querySelectorAll(".fade");
+    /* ================= SCROLL REVEAL ================= */
 
-      const observer = new IntersectionObserver(
-        (entries) => {
+    const revealElements = document.querySelectorAll('.fade');
 
-          entries.forEach((entry) => {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
 
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target);
-            }
+        entries.forEach((entry) => {
 
-          });
+          if (entry.isIntersecting) {
 
-        },
-        {
-          threshold: 0.12
-        }
-      );
+            entry.target.classList.add('visible');
 
-      fadeElements.forEach((element) => {
-        observer.observe(element);
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach((element) => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* ================= 3D TILT ================= */
+
+    const tiltCards = document.querySelectorAll('.tilt-card');
+
+    tiltCards.forEach((card) => {
+
+      card.addEventListener('mousemove', (event) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x =
+          event.clientX -
+          rect.left -
+          rect.width / 2;
+
+        const y =
+          event.clientY -
+          rect.top -
+          rect.height / 2;
+
+        const rotateX =
+          -(y / rect.height) * 8;
+
+        const rotateY =
+          (x / rect.width) * 8;
+
+        card.style.transform =
+          `perspective(1000px)
+           rotateX(${rotateX}deg)
+           rotateY(${rotateY}deg)
+           translateY(-5px)`;
+
       });
 
 
-      /* 3D card tilt */
-      const tiltCards = document.querySelectorAll(".tilt-card");
+      card.addEventListener('mouseleave', () => {
 
-      const isTouchDevice =
-        window.matchMedia("(hover: none)").matches ||
-        "ontouchstart" in window;
-
-      if (!isTouchDevice) {
-
-        tiltCards.forEach((card) => {
-
-          card.addEventListener("pointermove", (event) => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x =
-              event.clientX - rect.left;
-
-            const y =
-              event.clientY - rect.top;
-
-            const centerX =
-              rect.width / 2;
-
-            const centerY =
-              rect.height / 2;
-
-            const rotateX =
-              ((y - centerY) / centerY) * -3;
-
-            const rotateY =
-              ((x - centerX) / centerX) * 3;
-
-            card.style.transform =
-              `perspective(1000px)
-               rotateX(${rotateX}deg)
-               rotateY(${rotateY}deg)
-               translateY(-5px)`;
-
-          });
-
-
-          card.addEventListener("pointerleave", () => {
-
-            card.style.transform =
-              "";
-
-          });
-
-        });
-
-      }
-
-
-      /* Active navigation */
-      const sections =
-        document.querySelectorAll("section[id]");
-
-      const navLinks =
-        document.querySelectorAll(".nav a");
-
-      window.addEventListener("scroll", () => {
-
-        let current = "";
-
-        sections.forEach((section) => {
-
-          const sectionTop =
-            section.offsetTop - 150;
-
-          if (
-            window.scrollY >= sectionTop
-          ) {
-            current = section.getAttribute("id");
-          }
-
-        });
-
-        navLinks.forEach((link) => {
-
-          link.classList.remove("active");
-
-          if (
-            link.getAttribute("href") === `#${current}`
-          ) {
-            link.classList.add("active");
-          }
-
-        });
+        card.style.transform =
+          'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
 
       });
 
     });
+
+
+    /* ================= ACTIVE NAV ================= */
+
+    const sections =
+      document.querySelectorAll('section[id]');
+
+    const navLinks =
+      document.querySelectorAll('.nav a');
+
+
+    window.addEventListener('scroll', () => {
+
+      let current = '';
+
+      sections.forEach((section) => {
+
+        const sectionTop =
+          section.offsetTop - 150;
+
+        const sectionHeight =
+          section.offsetHeight;
+
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+
+          current = section.getAttribute('id');
+
+        }
+
+      });
+
+
+      navLinks.forEach((link) => {
+
+        link.classList.remove('active');
+
+        if (
+          link.getAttribute('href') === `#${current}`
+        ) {
+
+          link.classList.add('active');
+
+        }
+
+      });
+
+    });
+
   </script>
 
 </body>
