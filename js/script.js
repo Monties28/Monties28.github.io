@@ -64,3 +64,53 @@ if (profilePhoto && window.matchMedia("(hover: hover) and (pointer: fine)").matc
         profilePhoto.style.transform = "";
     });
 }
+
+
+/* ===== EXTRA PORTFOLIO INTERACTIONS ===== */
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Staggered reveal for cards
+    const groups = [
+        ".skills article",
+        ".projects .project",
+        ".certs article",
+        ".experience .exp"
+    ];
+
+    groups.forEach(selector => {
+        document.querySelectorAll(selector).forEach((item, index) => {
+            item.style.setProperty("--reveal-delay", `${index * 70}ms`);
+            item.classList.add("stagger-item");
+        });
+    });
+
+    // Small pointer interaction on cards
+    document.querySelectorAll(".project, .skills article, .certs article").forEach(card => {
+        card.addEventListener("pointermove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 4;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * -4;
+            card.style.setProperty("--mx", `${x}deg`);
+            card.style.setProperty("--my", `${y}deg`);
+        });
+
+        card.addEventListener("pointerleave", () => {
+            card.style.setProperty("--mx", "0deg");
+            card.style.setProperty("--my", "0deg");
+        });
+    });
+
+    // Scroll progress
+    const progress = document.createElement("div");
+    progress.className = "scroll-progress";
+    document.body.appendChild(progress);
+
+    const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const value = max > 0 ? (window.scrollY / max) * 100 : 0;
+        progress.style.width = `${value}%`;
+    };
+
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+});
