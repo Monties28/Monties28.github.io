@@ -1,0 +1,29 @@
+PANDUAN WEBSITE PORTOFOLIO 3D — ZIDDAN ILMY NAZZARIN
+========================================================
+
+1. Ekstrak ZIP sampai selesai (jangan hanya membuka isinya dari ZIP).
+2. Buka folder Ziddan-Portfolio-3D.
+3. Klik dua kali index.html untuk menjalankan website di browser.
+   Website dapat bekerja tanpa internet dan tanpa npm/install.
+
+INTERAKSI
+- Seret globe 3D di bagian pembuka menggunakan mouse atau sentuhan.
+- Gerakkan mouse di atas kartu proyek untuk melihat efek 3D.
+- Klik Motion on/off di navigasi untuk menghentikan animasi.
+- Navigasi otomatis menyesuaikan ponsel dan desktop.
+
+EDIT
+- Konten teks, nama, link, email: index.html
+- Warna, ukuran, desain: css/style.css
+- Animasi 3D dan interaksi: js/script.js
+- Foto profil: assets/profile.jpeg
+
+UPLOAD KE GITHUB PAGES
+- Unggah ISI folder Ziddan-Portfolio-3D (index.html, css, js, assets)
+  ke root repository GitHub Pages. Jangan unggah hanya ZIP-nya.
+- Settings > Pages > Deploy from a branch > main / (root).
+- Buka URL Pages yang disediakan GitHub.
+
+CATATAN: Visual proyek adalah mockup ilustratif, bukan tangkapan
+layar aplikasi. Tinjau kembali informasi kontak, riwayat, dan
+pencapaian sebelum memublikasikannya.
