@@ -1,0 +1,28 @@
+@page { size: A4; margin: 14mm 13mm; }
+@media print {
+  :root { color-scheme: light; }
+  html, body { background: #fff !important; color: #18202b !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .site-header, .scroll-progress, .cursor-glow, .hero-grid-overlay, .motion-switch, .menu-toggle, .mobile-nav, .drag-hint, .hero-actions, .work-end, .contact-section, .footer, .ticker { display: none !important; }
+  .hero { min-height: auto !important; padding: 18mm 0 8mm !important; background: #080d17 !important; color: #fff !important; break-after: page; }
+  .hero-shell { display: block !important; }
+  .hero-visual { display: none !important; }
+  .hero-description { max-width: 160mm; }
+  .hero-bottom { display: none !important; }
+  .section { padding: 10mm 0 !important; background: #fff !important; color: #18202b !important; break-inside: auto; }
+  .shell { width: 100% !important; max-width: none !important; }
+  .section-heading, .proof-heading { margin-bottom: 6mm !important; }
+  .work-grid, .expertise-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 5mm !important; }
+  .work-card, .expertise-card, .timeline-item, .proof-row { break-inside: avoid; box-shadow: none !important; }
+  .work-preview { min-height: 45mm !important; }
+  .work-info, .expertise-card, .timeline-item, .proof-row { color: #18202b !important; }
+  .about-grid { display: grid !important; grid-template-columns: 35% 1fr !important; gap: 8mm !important; }
+  .about-photo { max-height: 80mm; overflow: hidden; }
+  .about-photo img { width: 100%; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .timeline { gap: 4mm !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  .more-credentials { display: block !important; }
+  .more-credentials > summary { display: none !important; }
+  .credentials-extra { display: block !important; }
+  .section-meta { color: #667085 !important; }
+}
